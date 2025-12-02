@@ -1,18 +1,14 @@
 
 # Tareas Pendientes
 
-1. Verificar por qué los precios no se insertan al importar materiales.
-2. Corregir el comportamiento de los travesaños para que también incluyan los descuentos de la cara exterior.
-3. Realizar pruebas siguiendo el procedimiento establecido:
+1. **Resuelto:** los precios no se insertaban por un nombre de tarifa incorrecto en el Excel. Se añadirá un mensaje de error cuando la tarifa no exista en destino.
+2. **Resuelto:** los travesaños ya incluyen los descuentos de la cara exterior al añadir el tipo (Interior, Exterior, etc.) en su columna.
+3. **Validado:** procedimiento definitivo confirmado como correcto:
 
-   * Importación de materiales.
-   * Inserción de un DXF en un perfil.
-   * Modificación del punto de inserción.
-4. Evaluar la posible pérdida o desajuste de descuentos entre perfiles tras modificar el punto de inserción.
-5. Comprobar la relación entre punto de inserción y DXF, y documentarla.
-6. Probar el plan alternativo de importación en dos fases si el procedimiento principal falla:
-
-   * Importar materiales sin parámetros.
-   * Insertar los DXF.
-   * Importar parámetros de dimensiones y descuentos.
-7. Validar la visualización final de los modelos una vez completadas todas las pruebas.
+   * Importación de materiales con parámetros de dimensiones, punto de inserción y descuentos entre perfiles.
+   * Inserción de un DXF referencia por referencia tras la importación.
+   * Ajuste automático del punto de inserción al cargar el DXF según el valor importado desde Excel y presente en SQL.
+4. El punto de inserción no presenta inconvenientes siguiendo el procedimiento validado.
+5. No es necesario ejecutar el plan alternativo de importación en dos fases.
+6. No se requieren pasos adicionales de verificación relacionados con descuentos o dimensiones.
+7. Validación final: el flujo completo funciona correctamente y queda establecido como estándar.
