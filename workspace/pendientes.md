@@ -19,3 +19,9 @@
    * Tapajuntas: se gestionará manualmente por serie en la hoja de descuentos o con la nueva columna de serie común.
    * Fórmulas de `ZPDistance` verificadas; ejemplo `X-AL` aplica el descuento en el lado opuesto al PIX.
    * Recordatorio: mantener el punto de inserción correcto en los DXF.
+
+9. **Nuevas tareas tras pruebas S92/SC1:**
+   * Identificar todos los perfiles esclavos comunes de cada serie (revisar BD Lingote) antes de completar las importaciones.
+   * Actualizar los Excel de S92 y SC1 con los perfiles validados y reimportar con la app para confirmar que todo queda correcto.
+   * Rellenar los Excel de las ocho series restantes con los parámetros definitivos y cargarlos en la app.
+   * Revisar niveles de ubicación de materiales, clases y demás metadatos antes de cerrar cada importación.
