@@ -19,3 +19,10 @@
 4. Tapajuntas y compatibilidades por serie: se incorpora la columna `SeriesEsclavoComun` para declarar esclavos de series comunes que deben relacionarse con maestros de series específicas (p. ej., un tapajuntas en SC1 como maestro del marco en `S91;S92`). Es aplicable también a los Excel de las series por si aparece algún perfil especial.
 5. Fórmulas de `ZPDistance`: funcionan correctamente; validado el caso `X-AL` para aplicar descuentos en el lado opuesto al PIX.
 6. Seguimiento: recordatorio sobre DXF y punto de inserción; sin acciones pendientes. No hay bloqueos abiertos para Alex.
+
+## Notas tras pruebas de importación S92 y SC1
+
+* Las incidencias detectadas se debieron principalmente a parámetros incorrectos en el Excel; con datos correctos la app responde bien.
+* Es imprescindible cumplimentar `SeriesEsclavoComun` para perfiles comunes y definir las dimensiones con precisión, pues afectan directamente a los descuentos y mediciones.
+* Los descuentos deben revisarse con cuidado: cualquier desviación altera la medición o la sección resultante.
+* Con la app lista pueden crearse todas las series, pero primero hay que identificar todos los perfiles esclavos comunes para evitar omisiones.
