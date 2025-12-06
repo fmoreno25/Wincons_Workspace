@@ -12,9 +12,10 @@
 6. No se requieren pasos adicionales de verificación relacionados con descuentos o dimensiones.
 7. Validación final: el flujo completo funciona correctamente y queda establecido como estándar.
 8. **Alex — Estado actual:** sin bloqueos pendientes. Últimos ajustes completados:
-   * Clases especiales `JunquilloAcople` y `JunquilloHO` añadidas y funcionando sin errores tras reimportar el Excel.
+   * Las clases `JunquilloAcople` y `JunquilloHO` se eliminan; ya existen `JunquilloExtHO` y `JunquilloSuplemento` para cubrir esos casos.
+   * Se añade la columna `SeriesEsclavoComun` para definir esclavos compatibles por serie desde series comunes (p. ej., un tapajuntas en SC1 que envía a marcos de `S91;S92`).
    * La hoja exterior tiene la clase `HojaExt`, corrigiendo la relación maestro–esclavo.
    * Compatibilidad por nombre de clase operativa con coincidencia exacta (sin comodines `%`).
-   * Tapajuntas: se gestionará manualmente por serie en la hoja de descuentos.
+   * Tapajuntas: se gestionará manualmente por serie en la hoja de descuentos o con la nueva columna de serie común.
    * Fórmulas de `ZPDistance` verificadas; ejemplo `X-AL` aplica el descuento en el lado opuesto al PIX.
    * Recordatorio: mantener el punto de inserción correcto en los DXF.
