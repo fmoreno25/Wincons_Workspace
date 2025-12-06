@@ -2,6 +2,8 @@
 # Contexto del Proyecto
 
 * Se ha preparado un Excel con marcos, hojas y travesaños utilizando la plantilla de inserción.
+* Se elimina la necesidad de nuevas clases de junquillo: se mantienen `JunquilloExtHO` y `JunquilloSuplemento`; las clases `JunquilloAcople` y `JunquilloHO` dejan de usarse.
+* Se añade la columna `SeriesEsclavoComun` para declarar esclavos de series específicas cuando el maestro está en la serie común (p. ej., tapajuntas en SC1 que envía a marcos de `S91;S92`).
 * Esta plantilla importa materiales y envía datos de dimensiones de perfiles y descuentos entre ellos.
 * El problema de los precios se debía a que el Excel tenía un nombre de tarifa incorrecto; se añadirá un mensaje de error si la tarifa no existe.
 * Los travesaños ya aplican descuentos interiores y exteriores al incluir el tipo (Interior, Exterior, etc.) en su columna.
