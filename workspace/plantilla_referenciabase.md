@@ -2,6 +2,12 @@
 
 Usa esta plantilla en Excel para preparar las importaciones. Permite filtrar rápidamente por `ReferenciaBase` y completar los parámetros de dimensiones sin omisiones.
 
+## Novedades recientes de la plantilla
+
+* Se añadieron más **clases** en la lista desplegable de la hoja de materiales para cubrir todos los perfiles necesarios y evitar que falten valores al rellenar.
+* Hay un **botón** que pliega y despliega las columnas menos usadas, dejando visibles solo las columnas clave mientras se cargan datos.
+* Cada hoja de materiales incorpora una **columna extra al final** pensada para filtrar las `ReferenciaFinal` y localizar rápido las filas que deben ajustarse.
+
 ## Estructura de columnas sugerida
 
 | ReferenciaBase | ReferenciaFinal | Serie | SeriesComunes | SeriesEsclavoComun | Role | Clase | TipoCalculo | Color | Lado | LongitudBarra | GrupoPresupuesto | GrupoProduccion | Niveles | CI | CE | AI | AE | AL | PI | PIY | DescuentoSeguridad |
