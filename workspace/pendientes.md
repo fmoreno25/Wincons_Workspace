@@ -20,20 +20,24 @@
    * Fórmulas de `ZPDistance` verificadas; ejemplo `X-AL` aplica el descuento en el lado opuesto al PIX.
    * Recordatorio: mantener el punto de inserción correcto en los DXF.
 
-9. **Nuevas tareas tras pruebas S92/SC1:**
-   * Identificar todos los perfiles esclavos comunes de cada serie (revisar BD Lingote) antes de completar las importaciones.
-   * Actualizar los Excel de S92 y SC1 con los perfiles validados y reimportar con la app para confirmar que todo queda correcto.
-   * Rellenar los Excel de las ocho series restantes con los parámetros definitivos y cargarlos en la app.
-   * Revisar niveles de ubicación de materiales, clases y demás metadatos antes de cerrar cada importación.
+9. **Estado tras pruebas S92/SC1:**
+   * Identificar todos los perfiles esclavos comunes de cada serie (revisar BD Lingote) antes de completar las importaciones: **Pendiente**.
+   * Actualizar los Excel de S92 y SC1 con los perfiles validados y reimportar con la app para confirmar que todo queda correcto: **Hecho**.
+   * Rellenar los Excel de las ocho series restantes con los parámetros definitivos y cargarlos en la app: **Hecho**.
+   * Revisar niveles de ubicación de materiales, clases y demás metadatos antes de cerrar cada importación: **Hecho**.
 
 10. **Seguimiento de Excel pendientes:**
-    * Aún falta añadir parámetros de dimensiones y descuentos antes de importar las siguientes hojas: CE 40_S60E, CE 45 XTA_S56E, CE 45_S70E, CE 55 XTA_S66E, CE RPT 45_S59E, CE RPT 60 HO_S90E, CE RPT 70 HO_S91E, CE RPT MAXLight_S22E, CO Efficient_S68, CO RPT Efficient Plus_S78, CO RPT Evoque_S82 y PlantillaMaterialesV4.
+    * Parámetros de dimensiones y descuentos completados e importados en PrefWise para: CE 40_S60E, CE 45 XTA_S56E, CE 45_S70E, CE 55 XTA_S66E, CE RPT 45_S59E, CE RPT 60 HO_S90E, CE RPT 70 HO_S91E, CE RPT MAXLight_S22E, CO Efficient_S68, CO RPT Efficient Plus_S78, CO RPT Evoque_S82 y PlantillaMaterialesV4 (**Hecho**).
     * Las hojas C16 40_S60, C16 RPT 70 HO PLUS_S79P, C16 RPT 70 HO_S79, C16 RPT 70_S92, CE 40_S60E y Materiales_Comunes_SC1 ya están importadas y validadas en PrefWise a través de **A_Descuentos_App**.
-    * Próximo paso: actualizar los Excel pendientes, validarlos en PrefWise e importarlos con la app.
- * Identificar todos los perfiles esclavos comunes de cada serie (revisar BD Lingote) antes de completar las importaciones.
-  * Actualizar los Excel de S92 y SC1 con los perfiles validados y reimportar con la app para confirmar que todo queda correcto.
-  * Rellenar los Excel de las ocho series restantes con los parámetros definitivos y cargarlos en la app.
-  * Revisar niveles de ubicación de materiales, clases y demás metadatos antes de cerrar cada importación.
+    * Próximo paso: mantener las validaciones en PrefWise tras cualquier ajuste puntual.
+
+## Nuevos pendientes
+
+1. Añadir las juntas personalizadas en la nueva columna **ReferenciaBaseEsclavo** para el Excel **CE RPT MAXLight_S22E**.
+2. Revisar uno por uno los catálogos para identificar perfiles complementarios, juntas y lo que corresponda.
+3. Maestro **Hoja** → esclavo **Vierteaguas solera AP560000** en las series compatibles.
+4. Revisar puntos de inserción de las gomas para hacerlo común y fácil.
+5. Establecer una medida común para todos los vidrios (¿**-14**?).
 
 ## Notas recientes (S79 / S79P y descuentos)
 
