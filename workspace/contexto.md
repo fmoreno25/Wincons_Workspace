@@ -22,3 +22,7 @@
   * **A_Descuentos_Scripts**: copia de wincenPRO con todos los materiales y DXF usada para probar los scripts de descuentos de perfiles y detectar ajustes.
   * **A_Descuentos_App**: base restaurada desde wincenPRO donde se insertarán materiales con parámetros y descuentos de la serie S92 y la SC1 común para comparar resultados y afinar el Excel.
 * Objetivo de las pruebas: validar qué esclavos corresponden a cada maestro y ajustar los descuentos reales antes de fijar la hoja de Excel de Descuentos.
+
+## Criterio para mostrar tipos de descuento
+
+* Para evitar dudas en documentos o interfaces, mostrar siempre el tipo de descuento en cada línea. Preseleccionar el tipo por defecto cuando exista, pero mantenerlo editable para capturar excepciones y acompañarlo de una breve leyenda o tooltip que aclare los tipos disponibles.
