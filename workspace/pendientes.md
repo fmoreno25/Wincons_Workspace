@@ -38,6 +38,7 @@
 3. Maestro **Hoja** → esclavo **Vierteaguas solera AP560000** en las series compatibles.
 4. Revisar puntos de inserción de las gomas para hacerlo común y fácil.
 5. Establecer una medida común para todos los vidrios (¿**-14**?).
+6. Asignar las juntas de perfiles de la serie **S60**: el Excel actual genera error, pero se podrán cargar por **Regla** junto con los descuentos.
 
 ## Notas recientes (S79 / S79P y descuentos)
 
