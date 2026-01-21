@@ -31,33 +31,33 @@
     * Las hojas C16 40_S60, C16 RPT 70 HO PLUS_S79P, C16 RPT 70 HO_S79, C16 RPT 70_S92, CE 40_S60E y Materiales_Comunes_SC1 ya están importadas y validadas en PrefWise a través de **A_Descuentos_App**.
     * Próximo paso: mantener las validaciones en PrefWise tras cualquier ajuste puntual.
 
-## Nuevos pendientes
+## Nuevos pendientes (completados)
 
-1. Añadir las juntas personalizadas en la nueva columna **ReferenciaBaseEsclavo** para el Excel **CE RPT MAXLight_S22E**.
-2. Revisar uno por uno los catálogos para identificar perfiles complementarios, juntas y lo que corresponda.
-3. Maestro **Hoja** → esclavo **Vierteaguas solera AP560000** en las series compatibles.
-4. Revisar puntos de inserción de las gomas para hacerlo común y fácil.
-5. Establecer una medida común para todos los vidrios (¿**-14**?).
-6. Asignar las juntas de perfiles de la serie **S60**: el Excel actual genera error, pero se podrán cargar por **Regla** junto con los descuentos.
+1. Añadir las juntas personalizadas en la nueva columna **ReferenciaBaseEsclavo** para el Excel **CE RPT MAXLight_S22E**: **Hecho**.
+2. Revisar uno por uno los catálogos para identificar perfiles complementarios, juntas y lo que corresponda: **Hecho**.
+3. Maestro **Hoja** → esclavo **Vierteaguas solera AP560000** en las series compatibles: **Hecho**.
+4. Revisar puntos de inserción de las gomas para hacerlo común y fácil: **Hecho**.
+5. Establecer una medida común para todos los vidrios (¿**-14**?): **Hecho**.
+6. Asignar las juntas de perfiles de la serie **S60** (carga por **Regla** junto con los descuentos): **Hecho**.
 
-## Notas recientes (S79 / S79P y descuentos)
+## Notas recientes (S79 / S79P y descuentos) — completado
 
 * **DXF cargados:** se insertaron los DXF 791167 y 601126 en **A_Descuentos_App**.
 * **Series S79P y S79:**
   * S79P solo aporta el marco.
-  * En descuentos, todos los perfiles deben asociarse a clases de **S79**; revisar la clase de cada perfil antes de disparar descuentos.
-* **Descuentos pendientes por maestro → esclavo:**
-  * Marco: aplicar descuento de **Exterior** sobre el marco esclavo.
-  * Hoja: enviar descuento al Vierteaguas solera **AP560000**.
-  * Solera: reglas **Z** por altura de marco; marcar series por grupo (marco 40 → Z=40, marco 45 → Z=45…) y crear clusters por medida para aplicar el Z fijo según el marco del grupo.
-* **HojaExt:** el maestro actual no envía descuentos; al crear un nuevo maestro HojaExt sí funciona.
-* **SeriesEsclavoComún en SC1:** evitar comodines `S%` porque envían a todas las series; listar series explícitas (p. ej., `S79;S92;S60;…`) para que la app respete la clase y evite descuentos incorrectos.
-* **PrefWise:** corregidos los textos a “Mecanizado Interior” y “Mecanizado Exterior” (con espacio) para que se muestren alineados.
-* **Punto de inserción Y:** los Excel nuevos no incluyen la columna; de momento solo la plantilla, juntas y cepillos la usan; no se requiere acción.
-* **Procedimiento para los Excel restantes:**
-  1. Añadir descuento en Maestro **Marco** con esclavo **Marco** de tipo Exterior.
-  2. Añadir descuento en Maestro **Hoja** con esclavo **VierteaguasHoja**.
-  3. Añadir descuento en Maestro **HojaExt** porque la hoja normal no los crea.
-  4. Ajustar los nombres de **META** copiándolos de la plantilla.
-  5. Actualizar el Excel **.xlsm** con macro y después pasarlo a **.xlsx**.
-* **Importación en la app:** al importar añadir **SC1** (comunes) junto a las demás series y, antes, eliminar la tabla **Distances** en SQL. Estas acciones se aplican sobre la base de datos de **Centroalum**.
+  * En descuentos, todos los perfiles deben asociarse a clases de **S79**; revisión realizada antes de disparar descuentos.
+* **Descuentos por maestro → esclavo (completados):**
+  * Marco: descuento de **Exterior** aplicado sobre el marco esclavo.
+  * Hoja: descuento enviado al Vierteaguas solera **AP560000**.
+  * Solera: reglas **Z** por altura de marco aplicadas; series marcadas por grupo y clusters por medida definidos para aplicar el Z fijo según el marco del grupo.
+* **HojaExt:** se creó el nuevo maestro HojaExt y ya envía descuentos correctamente.
+* **SeriesEsclavoComún en SC1:** se evitaron comodines `S%` y se listaron series explícitas (p. ej., `S79;S92;S60;…`) para respetar clases y evitar descuentos incorrectos.
+* **PrefWise:** textos corregidos a “Mecanizado Interior” y “Mecanizado Exterior” (con espacio).
+* **Punto de inserción Y:** se mantiene el criterio actual; plantilla, juntas y cepillos siguen usando la columna cuando aplica.
+* **Procedimiento para los Excel restantes (realizado):**
+  1. Descuento en Maestro **Marco** con esclavo **Marco** de tipo Exterior.
+  2. Descuento en Maestro **Hoja** con esclavo **VierteaguasHoja**.
+  3. Descuento en Maestro **HojaExt** para cubrir los casos en que la hoja normal no los crea.
+  4. Nombres de **META** ajustados copiándolos de la plantilla.
+  5. Excel **.xlsm** actualizado con macro y convertido a **.xlsx**.
+* **Importación en la app:** **SC1** (comunes) añadido junto a las demás series; tabla **Distances** eliminada en SQL antes de importar. Acciones aplicadas sobre la base de datos de **Centroalum**.
