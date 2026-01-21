@@ -21,7 +21,6 @@
    * Recordatorio: mantener el punto de inserción correcto en los DXF.
 
 9. **Estado tras pruebas S92/SC1:**
-   * Identificar todos los perfiles esclavos comunes de cada serie (revisar BD Lingote) antes de completar las importaciones: **Pendiente**.
    * Actualizar los Excel de S92 y SC1 con los perfiles validados y reimportar con la app para confirmar que todo queda correcto: **Hecho**.
    * Rellenar los Excel de las ocho series restantes con los parámetros definitivos y cargarlos en la app: **Hecho**.
    * Revisar niveles de ubicación de materiales, clases y demás metadatos antes de cerrar cada importación: **Hecho**.
