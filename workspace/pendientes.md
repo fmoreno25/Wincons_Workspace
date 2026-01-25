@@ -1,5 +1,26 @@
 # Tareas Pendientes
 
+## Pendientes accionables actuales
+
+1. **Divisa**
+   * Definir tabla y columna.
+   * Automatizar creación y persistencia desde la app.
+2. **Color de materia prima**
+   * Localizar almacenamiento en BD.
+   * Automatizar asignación desde Excel.
+3. **Fase 3 — Geometría**
+   * Desarrollo técnico de importación DXF.
+   * Asignación automática de parámetros.
+4. **Opciones**
+   * Simplificar OpcionesDisparadas.
+   * Separar cambio de serie vs selección interna de materiales.
+5. **Fase 6 — Reglas**
+   * Consolidar reglas.
+   * Documentar alcance final.
+6. **Fase 7 — Escandallos**
+   * Definir escandallos genéricos estándar.
+   * Integrarlos con reglas y modelos.
+
 1. **Resuelto:** los precios no se insertaban por un nombre de tarifa incorrecto en el Excel. Se añadirá un mensaje de error cuando la tarifa no exista en destino.
 2. **Resuelto:** los travesaños ya incluyen los descuentos de la cara exterior al añadir el tipo (Interior, Exterior, etc.) en su columna.
 3. **Validado:** procedimiento definitivo confirmado como correcto:
