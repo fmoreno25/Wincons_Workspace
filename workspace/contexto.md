@@ -26,3 +26,55 @@
 ## Criterio para mostrar tipos de descuento
 
 * Para evitar dudas en documentos o interfaces, mostrar siempre el tipo de descuento en cada línea. Preseleccionar el tipo por defecto cuando exista, pero mantenerlo editable para capturar excepciones y acompañarlo de una breve leyenda o tooltip que aclare los tipos disponibles.
+
+## Flujo Excel → App validado (creación de BD desde cero)
+
+* La base de datos puede partir completamente vacía (sin máquina, grupos, planta, proveedores ni tarifas) y el proceso completo funciona.
+* Todas las fases existentes han sido ejecutadas y validadas con éxito, confirmando estructura y lógica.
+
+### Fase 0 — Estructura base
+
+* Importación desde Excel de grupos, planta, proveedores y tarifas.
+* Limpieza previa de datos existentes antes de importar.
+
+### Fase 1 — Colores
+
+* Importación de familias, colores y parámetros.
+* Asignación de Materia Prima desde Excel.
+
+### Fase 2 — Materiales y precios
+
+* Importación de materiales, precios y parámetros dimensionales.
+* Estudio previo de la posición correcta de los DXF para asignar valores.
+* Estructura del Excel:
+  * **Meta**: serie, proveedor, máquina, tipos de cálculo, clases, descuentos y roles.
+  * **Materiales**: datos principales con selección mediante desplegables.
+  * **Descuentos**: parametrización de descuentos entre perfiles.
+
+### Fase 3 — Geometría
+
+* Fase definida conceptualmente.
+* Orientada a la introducción de DXF y asignación automática de parámetros.
+
+### Fase 4 — Opciones
+
+* Sistema de opciones implementado: Meta, OpcionesMaterial, OpcionesControl, OpcionesSerie y OpcionesDisparadas.
+* Funcionamiento validado en su totalidad.
+
+### Fase 5 — Acristalamientos
+
+* Definición de juntas interiores con rangos mínimos y máximos.
+* Gestión de junquillos desplazados mediante override cuando aplica.
+* Cálculo basado en `AnchoTotalAcristalamiento`.
+* Comportamiento validado:
+  * Correderas: uso de `_JunquilloFicticio` y altura 0.
+  * Perfiles normales: altura desde `dbo.Perfiles.Altura` con override cuando corresponde.
+
+## Pendientes para cerrar la automatización
+
+1. **Automatización de divisa:** identificar tabla y columna donde persistir la divisa y crearla desde la app.
+2. **Color de materia prima:** localizar el almacenamiento en BD y automatizar su asignación desde Excel.
+3. **Fase 3 — Geometría:** desarrollo técnico de importación DXF y asignación automática de parámetros.
+4. **Simplificación del sistema de opciones:** reducir combinaciones en OpcionesDisparadas y separar cambio de serie vs. selección interna de materiales.
+5. **Fase 6 — Reglas:** consolidar el trabajo basado en reglas y documentar alcance final.
+6. **Fase 7 — Escandallos:** estandarizar escandallos genéricos e integrarlos con reglas y modelos.
