@@ -1,6 +1,28 @@
 
 # Contexto del Proyecto
 
+## Estado actual validado
+
+* Flujo Excel → App validado de extremo a extremo, incluso partiendo de base de datos vacía.
+* Importación correcta de estructura, colores, materiales, precios, opciones y acristalamientos.
+* Modelos sin DXF visualizan correctamente.
+* Inserción DXF ajusta automáticamente el punto de inserción con el valor importado desde Excel y guardado en SQL.
+* Plan alternativo en dos fases descartado.
+
+### Opciones y acristalamientos
+
+* Sistema de opciones completo y validado.
+* Acristalamientos:
+  * Juntas interiores con rangos.
+  * Junquillos desplazados por override.
+  * Correderas con `_JunquilloFicticio`.
+  * Perfiles normales toman altura de `dbo.Perfiles.Altura`.
+
+### Entorno de pruebas
+
+* **A_Descuentos_Scripts**: pruebas de lógica y ajustes.
+* **A_Descuentos_App**: validación real con S92 y SC1 para afinar Excel de Descuentos.
+
 * Se ha preparado un Excel con marcos, hojas y travesaños utilizando la plantilla de inserción.
 * Se elimina la necesidad de nuevas clases de junquillo: se mantienen `JunquilloExtHO` y `JunquilloSuplemento`; las clases `JunquilloAcople` y `JunquilloHO` dejan de usarse.
 * Se añade la columna `SeriesEsclavoComun` para declarar esclavos de series específicas cuando el maestro está en la serie común (p. ej., tapajuntas en SC1 que envía a marcos de `S91;S92`).
