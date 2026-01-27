@@ -2,6 +2,12 @@
 
 ## Pendientes accionables actuales
 
+1. **Cuadro de mandos — eventos clave por área**
+   * **Comercial:** presupuestos pendientes de aprobar, aprobados y en seguimiento; estudio de precios (valor total, diferencias con precios de compra, % de beneficio, tiempos y coste de mano de obra, tiempos de instalación a obra).
+   * **Producción:** pedidos aprobados, pendientes de entrega de materiales, materiales faltantes; pedidos con fases, fases en producción, lotes creados, producción pendiente de lote, lotes en fabricación.
+   * **Facturación:** pedidos terminados pendientes de albarán, con albarán, en taller pendientes de enviar; pedidos enviados pendientes de instalar; pedidos instalados; pedidos instalados sin albarán.
+   * **Stock:** control de stock de materiales.
+
 1. **Divisa**
    * Definir tabla y columna.
    * Automatizar creación y persistencia desde la app.
