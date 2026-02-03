@@ -26,3 +26,11 @@
 * Es imprescindible cumplimentar `SeriesEsclavoComun` para perfiles comunes y definir las dimensiones con precisión, pues afectan directamente a los descuentos y mediciones.
 * Los descuentos deben revisarse con cuidado: cualquier desviación altera la medición o la sección resultante.
 * Con la app lista pueden crearse todas las series, pero primero hay que identificar todos los perfiles esclavos comunes para evitar omisiones.
+
+## Validación tras inserción desde Excel con BD limpia
+
+* Se restauró la base de datos correcta y se eliminaron todas las fases desde la app para dejar la BD limpia.
+* Tras insertar cada fase, la transferencia de series desde Excel quedó satisfactoria y sin ajustes adicionales.
+* En un intento anterior, la BD parecía carecer de símbolos: al migrar solo `VariablesGlobales` no funcionó; al pasar la tabla completa se traspasaron símbolos, pero se duplicó `DataVersions` y lo insertado no se veía en PrefWise.
+* Con la BD vacía pero incluyendo símbolos y datos procedentes de PrefSuite, el funcionamiento es correcto.
+* Resultados verificados: precios al primer intento, transparencias y colores correctos, y secciones, opciones y acristalamientos funcionando.
